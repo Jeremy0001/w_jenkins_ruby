@@ -1,0 +1,9 @@
+*~
+.vagrant/*
+.kitchen/*
+*.lock
+*.bat
+vendored-cookbooks/*
+variables.json
+jenkins.json
+.DS_Store

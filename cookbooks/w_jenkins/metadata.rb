@@ -1,0 +1,11 @@
+name 'w_jenkins'
+license 'apachev2'
+description 'Installs/Configures Jenkins and related components for Chef cookbooks CI'
+long_description 'Installs/Configures common components such as Jenkins, Ruby, Java'
+version '0.0'
+
+depends 'firewall'
+depends 'build-essential'
+depends 'ruby-install'
+depends 'git'
+depends 'jenkins'

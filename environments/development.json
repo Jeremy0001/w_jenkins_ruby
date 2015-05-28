@@ -1,0 +1,15 @@
+{
+  "name": "development",
+  "description": "The Web Application Developer's vagrant Chef environment",
+  "json_class": "Chef::Environment",
+  "chef_type": "environment",
+  "override_attributes": {
+    "authorization": {
+      "sudo": {
+      "groups": ["admin"],
+      "users": ["vagrant","jenkins"],
+      "passwordless": "true"
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "w_jenkins_role",
+  "json_class": "Chef::Role",
+  "chef_type": "role",
+  "override_attributes": {
+    "w_jenkins": {
+    }
+  },
+  "run_list": [
+    "recipe[w_jenkins]"
+  ]
+}
