@@ -3,26 +3,20 @@
 ---
 driver:
   name: vagrant
-  customize:
-    memory: 2048
-    cpus: 2
-   
+
 provisioner:
   name: chef_zero
-  environments_path: environments
+  data_bags_path: test/fixtures/data_bags
   roles_path: roles
+  environments_path: environments
   client_rb:
-    environment: development
+    environment: testkitchen
 
 platforms:
   - name: ubuntu-12.04
   - name: ubuntu-14.04
 
 suites:
-  - name: test_w_common
-    run_list:
-      - role[w_common_role]
   - name: test_w_jenkins
     run_list:
-      - role[w_common_role]
       - role[w_jenkins_role]
