@@ -1,0 +1,1 @@
+default['w_common']['ha_connecction'] = false

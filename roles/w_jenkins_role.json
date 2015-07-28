@@ -3,7 +3,8 @@
   "json_class": "Chef::Role",
   "chef_type": "role",
   "override_attributes": {
-    "w_jenkins": {
+    "w_common": {
+      "ha_connecction": false
     }
   },
   "run_list": [

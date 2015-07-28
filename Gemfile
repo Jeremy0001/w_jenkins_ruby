@@ -1,13 +1,21 @@
 source 'https://rubygems.org'
-gem 'kitchen-sync'
-gem 'kitchen-vagrant'
-gem 'knife-spec'
+
+chef_version = ENV.fetch("CHEF_VERSION", "12.3.0")
+
+gem "chef", "~> #{chef_version}"
+gem 'chefspec'
+gem 'chef-zero'
 gem 'berkshelf'
 gem 'foodcritic'
-gem 'chef-zero'
-gem 'docker'
-gem 'kitchen-ec2'
-gem 'serverspec'
-gem 'test-kitchen'
-gem 'chefspec'
+gem 'rake'
+gem 'rubocop'
 gem 'byebug'
+gem 'bundler-audit'
+
+group :integration do
+  gem 'serverspec'
+  gem 'kitchen-vagrant'
+  gem 'vagrant-wrapper'
+  gem 'kitchen-sync'
+  gem 'test-kitchen'
+end

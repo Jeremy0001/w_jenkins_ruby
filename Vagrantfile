@@ -3,7 +3,7 @@
 
 Vagrant.configure(2) do |config|
 
-  config.vm.box = "ubuntu/trusty64"
+  config.vm.box = "joelhandwell/ubuntu_trusty64_vbguest"
 
   config.vm.synced_folder ".", "/vagrant"
 
@@ -17,9 +17,8 @@ Vagrant.configure(2) do |config|
   config.vm.provision "chef_zero" do |chef|
     chef.cookbooks_path = "cookbooks"
     chef.environments_path = "environments"
-    chef.environment = "development"    
+    chef.environment = "testkitchen"
     chef.roles_path = "roles"
-    chef.add_role "w_common_role"
     chef.add_role "w_jenkins_role"
   end
 
