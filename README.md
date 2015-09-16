@@ -7,7 +7,9 @@ Requirements
 ------------
 Cookbook Dependency:
 
-* memcached
+* java
+* jenkins
+* ruby-install
 
 Supported Platform:
 Ubuntu 14.04, Ubuntu 12.04
